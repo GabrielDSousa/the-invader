@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ddtdyxosm7g5h"]
+
+[ext_resource type="MeshLibrary" uid="uid://b3tit42gxc3yk" path="res://assets/MeshLibrary.tres" id="1_t5fjg"]
+
+[node name="grid" type="GridMap" unique_id=729872336]
+mesh_library = ExtResource("1_t5fjg")
+cell_size = Vector3(1, 0.01, 1)
+cell_center_y = false
+metadata/_editor_floor_ = Vector3(0, 1, 0)

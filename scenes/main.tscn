@@ -3,7 +3,7 @@
 [ext_resource type="Environment" uid="uid://cm77bbr0io118" path="res://scenes/main-environment.tres" id="1_x8oc8"]
 [ext_resource type="PackedScene" uid="uid://cjkjq2p8t58n1" path="res://scenes/zoo.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c62gy278tu0fw" path="res://scenes/gym.tscn" id="3_sugp2"]
-[ext_resource type="MeshLibrary" uid="uid://b3tit42gxc3yk" path="res://assets/MeshLibrary.tres" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dopktykraloo2" path="res://scenes/map.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node3D" unique_id=458076270]
 
@@ -20,7 +20,6 @@ transform = Transform3D(0.86602503, -0.21130913, 0.4531536, 0, 0.90630776, 0.422
 [node name="Camera" type="Camera3D" parent="view" unique_id=1011676557]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 environment = ExtResource("1_x8oc8")
-fov = 40.0
 
 [node name="sun" type="DirectionalLight3D" parent="." unique_id=795112800]
 transform = Transform3D(-0.7660449, -0.492404, 0.41317585, 0, 0.6427878, 0.76604426, -0.642788, 0.5868242, -0.49240378, 0, 0, 0)
@@ -34,10 +33,5 @@ visible = false
 [node name="gym" parent="." unique_id=2131120258 instance=ExtResource("3_sugp2")]
 visible = false
 
-[node name="map" type="Node3D" parent="." unique_id=308647009]
-
-[node name="grid" type="GridMap" parent="map" unique_id=1724385443]
-mesh_library = ExtResource("4_jyhfs")
-cell_size = Vector3(1, 0.01, 1)
-cell_center_y = false
-metadata/_editor_floor_ = Vector3(0, 1, 0)
+[node name="map" parent="." unique_id=1678966177 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
