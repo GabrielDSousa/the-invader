@@ -14,15 +14,10 @@ environment = ExtResource("1_x8oc8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009482384, 0.017208815, 0.0031292439)
 size = Vector3(100, 0.001, 100)
 
-[node name="view" type="Node3D" parent="." unique_id=1366684937]
-transform = Transform3D(0.86602503, -0.21130913, 0.4531536, 0, 0.90630776, 0.42261803, -0.4999998, -0.36599815, 0.78488505, 0, 0.45, 0)
-
-[node name="Camera" type="Camera3D" parent="view" unique_id=1011676557]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-environment = ExtResource("1_x8oc8")
-
 [node name="sun" type="DirectionalLight3D" parent="." unique_id=795112800]
-transform = Transform3D(-0.7660449, -0.492404, 0.41317585, 0, 0.6427878, 0.76604426, -0.642788, 0.5868242, -0.49240378, 0, 0, 0)
+transform = Transform3D(1.0000006, 0, 0, 0, -4.37114e-08, 0.99999976, 0, -1.0000002, -4.3711378e-08, 0, 0, 0)
+light_color = Color(1, 1, 0.9098039, 1)
+light_energy = 0.8
 shadow_enabled = true
 shadow_opacity = 0.95
 
