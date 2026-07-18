@@ -17,7 +17,7 @@ var bursting: bool = false
 func _ready() -> void:
 	position.y = INITIAL_LEVEL
 	scale = scale * INITIAL_LEVEL
-	beam.connect("body_entered", drag_object)
+	beam.connect("area_entered", drag_object)
 
 
 func _physics_process(_delta: float) -> void:
@@ -60,5 +60,5 @@ func stop_burst() -> void:
 	enemy_ufo_beam.visible = false
 	enemy_ufo_beam_burst.visible = false
 
-func drag_object(body: Node) -> void:
-	print_debug(body)
+func drag_object(area: Node) -> void:
+	print_debug(area)
