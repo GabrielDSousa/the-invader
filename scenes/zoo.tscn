@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cjkjq2p8t58n1"]
+
+[ext_resource type="PackedScene" uid="uid://db5c5sw3lytbi" path="res://assets/tower defense/models/GLB format/enemy-ufo-a-weapon.glb" id="1_luqbt"]
+[ext_resource type="PackedScene" uid="uid://blckgx1uosg7l" path="res://assets/tower defense/models/GLB format/enemy-ufo-a.glb" id="2_v58ed"]
+[ext_resource type="PackedScene" uid="uid://bsp8tjbm30e7w" path="res://assets/tower defense/models/GLB format/enemy-ufo-beam-burst.glb" id="5_jyflq"]
+[ext_resource type="PackedScene" uid="uid://dx1yok1m353ef" path="res://assets/tower defense/models/GLB format/enemy-ufo-beam.glb" id="6_mb8ik"]
+[ext_resource type="PackedScene" uid="uid://bb6tp8rckqkb4" path="res://assets/tower defense/models/GLB format/enemy-ufo-c-weapon.glb" id="7_5t26k"]
+[ext_resource type="PackedScene" uid="uid://rd3wnc0yo35x" path="res://assets/tower defense/models/GLB format/enemy-ufo-c.glb" id="8_d8ce1"]
+[ext_resource type="PackedScene" uid="uid://btyo7elwk14vo" path="res://assets/tower defense/models/GLB format/weapon-ammo-cannonball.glb" id="8_lbxln"]
+[ext_resource type="PackedScene" uid="uid://cnf275wfuflps" path="res://assets/tower defense/models/GLB format/selection-a.glb" id="11_nbpbf"]
+[ext_resource type="PackedScene" uid="uid://dtpk1auohytyi" path="res://assets/tower defense/models/GLB format/selection-b.glb" id="12_xhj04"]
+[ext_resource type="PackedScene" uid="uid://de1mbv7bcu3te" path="res://assets/tower defense/models/GLB format/spawn-round.glb" id="13_1rov5"]
+[ext_resource type="PackedScene" uid="uid://db2ocojxsc17r" path="res://assets/tower defense/models/GLB format/weapon-ammo-bullet.glb" id="14_5854x"]
+[ext_resource type="PackedScene" uid="uid://if36jr5uikfj" path="res://assets/tower defense/models/GLB format/wood-structure-high-part.glb" id="16_2imv5"]
+[ext_resource type="PackedScene" uid="uid://csvjkdovg4hwp" path="res://assets/tower defense/models/GLB format/wood-structure-high.glb" id="17_vvenp"]
+[ext_resource type="PackedScene" uid="uid://b6wpo1sqo2kxd" path="res://assets/tower defense/models/GLB format/wood-structure-part.glb" id="18_xlak1"]
+[ext_resource type="PackedScene" uid="uid://c1msqnbxrgdgj" path="res://assets/tower defense/models/GLB format/wood-structure.glb" id="19_rxna2"]
+
+[node name="Zoo" type="Node3D" unique_id=1278592835]
+
+[node name="enemy-ufo" parent="." unique_id=560849984 instance=ExtResource("2_v58ed")]
+
+[node name="enemy-ufo-weapon" parent="." unique_id=300065951 instance=ExtResource("1_luqbt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="weapon-bullet" parent="." unique_id=1016134317 instance=ExtResource("14_5854x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="enemy-spawn" parent="." unique_id=2101891925 instance=ExtResource("13_1rov5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="ufo" parent="." unique_id=1297905750 instance=ExtResource("8_d8ce1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="ufo-weapon" parent="." unique_id=309994268 instance=ExtResource("7_5t26k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="weapon-cannonball" parent="." unique_id=2127724120 instance=ExtResource("8_lbxln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="ufo-beam" parent="." unique_id=849412319 instance=ExtResource("6_mb8ik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="ufo-beam-burst" parent="." unique_id=1077025747 instance=ExtResource("5_jyflq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="selection" parent="." unique_id=899150943 instance=ExtResource("11_nbpbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="selection-action" parent="." unique_id=1339503328 instance=ExtResource("12_xhj04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="wood-structure-initial" parent="." unique_id=496276081 instance=ExtResource("18_xlak1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="wood-structure-first-phase" parent="." unique_id=1337297204 instance=ExtResource("19_rxna2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="wood-structure-second-phase" parent="." unique_id=426647330 instance=ExtResource("16_2imv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="wood-structure-final" parent="." unique_id=1659749257 instance=ExtResource("17_vvenp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
