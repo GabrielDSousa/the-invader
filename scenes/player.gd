@@ -3,7 +3,7 @@ extends RigidBody3D
 @onready var animation_player: AnimationPlayer = $beam/AnimationPlayer
 @onready var enemy_ufo_beam: MeshInstance3D = $"beam/ufo-beam/enemy-ufo-beam"
 @onready var enemy_ufo_beam_burst: MeshInstance3D = $"beam/ufo-beam-burst/enemy-ufo-beam-burst"
-
+@onready var beam: Area3D = $beam
 
 
 const VELOCITY: float = 1.0
@@ -17,6 +17,8 @@ var bursting: bool = false
 func _ready() -> void:
 	position.y = INITIAL_LEVEL
 	scale = scale * INITIAL_LEVEL
+	beam.connect("body_entered", drag_object)
+
 
 func _physics_process(_delta: float) -> void:
 	# Movement
@@ -57,3 +59,6 @@ func stop_burst() -> void:
 	await animation_player.animation_finished
 	enemy_ufo_beam.visible = false
 	enemy_ufo_beam_burst.visible = false
+
+func drag_object(body: Node) -> void:
+	print_debug(body)
