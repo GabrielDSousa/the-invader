@@ -6,7 +6,7 @@ extends RigidBody3D
 
 
 
-const VELOCITY: float = 1.0
+const VELOCITY: float = 10.0
 const MAX_LEVEL: float = 6.0
 const INITIAL_LEVEL: float = 1.0
 
