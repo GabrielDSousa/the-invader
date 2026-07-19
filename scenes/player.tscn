@@ -133,9 +133,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_43t3q")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
-height = 1.0
-radius = 0.4
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qhqgy"]
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 length = 0.001
@@ -150,59 +148,47 @@ tracks/0/keys = {
 "points": PackedFloat32Array(10, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/1/type = "value"
+tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("collision:disabled")
+tracks/1/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(10, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer:speed_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(2, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ufo-beam-burst:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ufo-beam-burst:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ufo-beam:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ufo-beam:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -212,70 +198,58 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_tuyoq"]
 resource_name = "burst"
 loop_mode = 1
-tracks/0/type = "value"
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("collision:disabled")
+tracks/0/path = NodePath("ufo-beam:mesh:surface_0/material:proximity_fade_distance")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ufo-beam:mesh:surface_0/material:proximity_fade_distance")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 2, 2),
 "points": PackedFloat32Array(0.01, -0.25, 0, 0.25, 0, 1, -0.083333336, -0.165, 0, 0, 0.01, -0.083333336, 0.165, 0, 0),
 "times": PackedFloat32Array(0, 0.5, 1)
 }
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
 "points": PackedFloat32Array(10, -0.25, 0, 0.25, 0, 1, -0.041666668, 1.5, 0, 0, 0.01, -0.041666668, 0.165, 0, 0, 1, -0.041666668, -0.165, 0, 0, 10, -0.041666668, -1.5, 0, 0),
 "times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1)
 }
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationPlayer:speed_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 2),
 "points": PackedFloat32Array(2, -0.25, 0, 0.25, 0, 3, -0.16666667, -0.16666667, 0, 0),
 "times": PackedFloat32Array(0, 1)
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ufo-beam:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ufo-beam:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("ufo-beam-burst:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ufo-beam-burst:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -298,22 +272,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("collision:disabled")
+tracks/1/path = NodePath("ufo-beam:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -344,13 +306,16 @@ metadata/_edit_vertical_guides_ = [24.0]
 metadata/_edit_horizontal_guides_ = [24.0]
 
 [node name="ufo" type="MeshInstance3D" parent="." unique_id=1624900039]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 mesh = SubResource("ArrayMesh_qhqgy")
 skeleton = NodePath("")
 
 [node name="collision" type="CollisionShape3D" parent="." unique_id=1343041291]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_tbgi4")
 
 [node name="beam" type="Area3D" parent="." unique_id=1081566404]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 collision_layer = 2
 collision_mask = 2
 input_ray_pickable = false
@@ -369,9 +334,8 @@ skeleton = NodePath("")
 
 [node name="collision" type="CollisionShape3D" parent="beam" unique_id=691889124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("CylinderShape3D_qhqgy")
+shape = SubResource("CapsuleShape3D_qhqgy")
 disabled = true
-debug_color = Color(0, 0.6, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="beam" unique_id=435279618]
 libraries/ = SubResource("AnimationLibrary_tuyoq")
@@ -381,7 +345,8 @@ speed_scale = 2.0
 transform = Transform3D(0.86602503, -0.21130913, 0.4531536, 0, 0.90630776, 0.42261803, -0.4999998, -0.36599815, 0.78488505, 0, 0.45, 0)
 
 [node name="Camera" type="Camera3D" parent="view" unique_id=101244302]
-transform = Transform3D(1.0000005, 0, -8.940697e-08, -2.9802322e-08, 1, 0, 8.940697e-08, -2.9802322e-08, 1.0000007, -0.015102625, -1.0423064, 5.5043416)
+transform = Transform3D(1.0000005, 2.980231e-08, -8.940699e-08, -2.9802322e-08, 1, 2.9802344e-08, 8.940697e-08, -2.980232e-08, 1.0000007, 0, 0, 4)
+rotation_edit_mode = 2
 environment = ExtResource("3_dqkch")
 doppler_tracking = 2
 fov = 40.0

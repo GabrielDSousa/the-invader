@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cdl4hvrn3nxf2"]
 
 [ext_resource type="Environment" uid="uid://cm77bbr0io118" path="res://scenes/main-environment.tres" id="1_x8oc8"]
-[ext_resource type="PackedScene" uid="uid://cjkjq2p8t58n1" path="res://scenes/zoo.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://c62gy278tu0fw" path="res://scenes/gym.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://5sw1esssx3gv" path="res://scenes/player.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dopktykraloo2" path="res://scenes/map.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node3D" unique_id=458076270]
@@ -21,11 +20,10 @@ light_energy = 0.8
 shadow_enabled = true
 shadow_opacity = 0.95
 
-[node name="zoo" parent="." unique_id=1278592835 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
-visible = false
+[node name="phase" type="Node3D" parent="." unique_id=1559100268]
 
-[node name="map" parent="." unique_id=1678966177 instance=ExtResource("4_jyhfs")]
+[node name="map" parent="phase" unique_id=1678966177 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 
-[node name="gym" parent="." unique_id=2131120258 instance=ExtResource("3_sugp2")]
+[node name="player" parent="phase" unique_id=538889824 instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.50274, 0, 80.92718)
