@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddtdyxosm7g5h"]
 
-[ext_resource type="MeshLibrary" uid="uid://b3tit42gxc3yk" path="res://assets/MeshLibrary.tres" id="1_t5fjg"]
+[ext_resource type="MeshLibrary" uid="uid://dvhwfdrxs6pup" path="res://assets/MeshLibraryRevamp.tres" id="1_t5fjg"]
 
 [node name="grid" type="GridMap" unique_id=729872336]
 mesh_library = ExtResource("1_t5fjg")
