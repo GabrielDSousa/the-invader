@@ -46,10 +46,6 @@ shadow_mesh = SubResource("ArrayMesh_eqvao")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tbgi4"]
 points = PackedVector3Array(0.01491427, 0.008517949, 0.27168867, -0.029957693, 0.12820351, -0.47749874, -0.031860743, 0.19938561, -0.5079714, 0.5101714, 0.19933257, -0.029660735, -0.07408623, 0.5001441, 0.076286234, -0.5101714, 0.19938561, -0.029660735, 0.0148933865, 0.18836483, 0.48066175, 0.029851086, 0.008325549, -0.26749235, -0.27096614, 0.19938561, 0.43256974, 0.014738288, 0.49977067, -0.10133878, 0.44635004, 0.19933257, 0.25718585, -0.26937935, 0.0085326005, -0.027720608, 0.20724465, 0.19933257, -0.46013033, 0.26942697, 0.008576212, -0.027715482, -0.46223047, 0.19938561, -0.20504464, 0.074000865, 0.5001681, 0.07629372, -0.42095405, 0.12779719, 0.2427721, 0.41693267, 0.12908931, -0.25090772, 0.27096614, 0.19933257, 0.43256974, -0.2529433, 0.12917633, -0.41446185, -0.44635004, 0.19938561, 0.2572857, 0.42099035, 0.12778552, 0.24269865, 0.46223047, 0.19933257, -0.20494476, -0.20714477, 0.19938561, -0.46013033, -0.07438231, 0.50109166, -0.072182305, 0.0149247, 0.12826847, 0.48166773, 0.07429525, 0.5011114, -0.07218846, -0.14984444, 0.008281715, 0.22696665, -0.47997305, 0.12812641, -0.027774816, 0.25296482, 0.12916495, -0.41440403, -0.23964566, 0.12826529, 0.42169723, 0.47926706, 0.12832488, 0.03213074)
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
-height = 1.0
-radius = 0.4
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqkch"]
 resource_name = "colormap"
 transparency = 1
@@ -137,12 +133,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_43t3q")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qhqgy"]
+height = 1.0
+radius = 0.4
+
 [sub_resource type="Animation" id="Animation_dqkch"]
 length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ufo-beam/enemy-ufo-beam:mesh:surface_0/material:proximity_fade_distance")
+tracks/0/path = NodePath("ufo-beam:mesh:surface_0/material:proximity_fade_distance")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -165,7 +165,7 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam-burst/enemy-ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
+tracks/2/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -187,7 +187,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ufo-beam-burst/enemy-ufo-beam-burst:visible")
+tracks/4/path = NodePath("ufo-beam-burst:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -199,7 +199,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ufo-beam/enemy-ufo-beam:visible")
+tracks/5/path = NodePath("ufo-beam:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -227,7 +227,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ufo-beam/enemy-ufo-beam:mesh:surface_0/material:proximity_fade_distance")
+tracks/1/path = NodePath("ufo-beam:mesh:surface_0/material:proximity_fade_distance")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -238,7 +238,7 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam-burst/enemy-ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
+tracks/2/path = NodePath("ufo-beam-burst:mesh:surface_0/material:proximity_fade_distance")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -260,7 +260,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ufo-beam/enemy-ufo-beam:visible")
+tracks/4/path = NodePath("ufo-beam:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -272,7 +272,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ufo-beam-burst/enemy-ufo-beam-burst:visible")
+tracks/5/path = NodePath("ufo-beam-burst:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -287,7 +287,7 @@ resource_name = "de_active"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ufo-beam/enemy-ufo-beam:mesh:surface_0/material:proximity_fade_distance")
+tracks/0/path = NodePath("ufo-beam:mesh:surface_0/material:proximity_fade_distance")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -310,7 +310,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ufo-beam/enemy-ufo-beam:visible")
+tracks/2/path = NodePath("ufo-beam:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -327,17 +327,23 @@ _data = {
 &"de_active": SubResource("Animation_qlg0r")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_qhqgy"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
 [node name="player" type="RigidBody3D" unique_id=538889824]
+axis_lock_linear_y = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 gravity_scale = 0.0
+continuous_cd = true
 linear_damp = 1.0
 script = ExtResource("1_g2els")
+metadata/_edit_vertical_guides_ = [24.0]
+metadata/_edit_horizontal_guides_ = [24.0]
 
-[node name="ufo" type="Node3D" parent="." unique_id=1297905750]
-
-[node name="enemy-ufo-c" type="MeshInstance3D" parent="ufo" unique_id=1624900039]
+[node name="ufo" type="MeshInstance3D" parent="." unique_id=1624900039]
 mesh = SubResource("ArrayMesh_qhqgy")
 skeleton = NodePath("")
 
@@ -345,27 +351,27 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_tbgi4")
 
 [node name="beam" type="Area3D" parent="." unique_id=1081566404]
+collision_layer = 2
+collision_mask = 2
+input_ray_pickable = false
+
+[node name="ufo-beam" type="MeshInstance3D" parent="beam" unique_id=2080832734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+mesh = SubResource("ArrayMesh_tuyoq")
+skeleton = NodePath("")
+
+[node name="ufo-beam-burst" type="MeshInstance3D" parent="beam" unique_id=982826148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+mesh = SubResource("ArrayMesh_1emee")
+skeleton = NodePath("")
 
 [node name="collision" type="CollisionShape3D" parent="beam" unique_id=691889124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CylinderShape3D_qhqgy")
 disabled = true
-
-[node name="ufo-beam" type="Node3D" parent="beam" unique_id=1011583453]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="enemy-ufo-beam" type="MeshInstance3D" parent="beam/ufo-beam" unique_id=2080832734]
-visible = false
-mesh = SubResource("ArrayMesh_tuyoq")
-skeleton = NodePath("")
-
-[node name="ufo-beam-burst" type="Node3D" parent="beam" unique_id=1278403702]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-
-[node name="enemy-ufo-beam-burst" type="MeshInstance3D" parent="beam/ufo-beam-burst" unique_id=982826148]
-visible = false
-mesh = SubResource("ArrayMesh_1emee")
-skeleton = NodePath("")
+debug_color = Color(0, 0.6, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="beam" unique_id=435279618]
 libraries/ = SubResource("AnimationLibrary_tuyoq")
@@ -375,6 +381,74 @@ speed_scale = 2.0
 transform = Transform3D(0.86602503, -0.21130913, 0.4531536, 0, 0.90630776, 0.42261803, -0.4999998, -0.36599815, 0.78488505, 0, 0.45, 0)
 
 [node name="Camera" type="Camera3D" parent="view" unique_id=101244302]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+transform = Transform3D(1.0000005, 0, -8.940697e-08, -2.9802322e-08, 1, 0, 8.940697e-08, -2.9802322e-08, 1.0000007, -0.015102625, -1.0423064, 5.5043416)
 environment = ExtResource("3_dqkch")
+doppler_tracking = 2
 fov = 40.0
+size = 3.0
+
+[node name="HUD" type="Control" parent="view" unique_id=158017153]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="XP" type="Control" parent="view/HUD" unique_id=1776105689]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 113.0
+offset_bottom = 64.0
+
+[node name="label" type="Label" parent="view/HUD/XP" unique_id=1187934008]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "XP:"
+label_settings = SubResource("LabelSettings_qhqgy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="view/HUD/XP" unique_id=418094864]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 46.0
+text = "0"
+label_settings = SubResource("LabelSettings_qhqgy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level" type="Control" parent="view/HUD" unique_id=1026460980]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 65.0
+offset_right = 113.0
+offset_bottom = 105.0
+
+[node name="label" type="Label" parent="view/HUD/level" unique_id=790362276]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "LVL: "
+label_settings = SubResource("LabelSettings_qhqgy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="view/HUD/level" unique_id=1672777867]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 46.0
+text = "0"
+label_settings = SubResource("LabelSettings_qhqgy")
+horizontal_alignment = 1
+vertical_alignment = 1
